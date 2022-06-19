@@ -78,7 +78,7 @@ public class TimeStop extends StandEntityAction {
         IStandPower standPower = ((IStandPower) power);
         int timeStopTicks = TimeHandler.getTimeStopTicks(getExpRequirement(), (IStandPower) power, user, INonStandPower.getNonStandPowerOptional(user));
         if (!world.isClientSide()) {
-            standPower.setExp(standPower.getExp() + 4);
+            standPower.setExp(standPower.getExp() + 20);
             BlockPos blockPos = user.blockPosition();
             ChunkPos chunkPos = new ChunkPos(blockPos);
             TimeHandler.setTimeResumeSounds(world, chunkPos, timeStopTicks, this, user);
